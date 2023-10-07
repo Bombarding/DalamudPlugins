@@ -3,8 +3,8 @@
     "Author": "Asriel Camora & daemitus & Bombarding",
     "Name": "Something Need Doing",
     "InternalName": "SomethingNeedDoing",
-    "AssemblyVersion": "1.5.0.1",
-    "Description": "A hard-working peon that crafts what you tell him to. An all-in-one sythesizing solution.",
+    "AssemblyVersion": "1.5.0.2",
+    "Description": "Because you just want to craft.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Bombarding/SomethingNeedDoing",
     "DalamudApiLevel": 9,
@@ -13,15 +13,15 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "ImageUrls": [],
-    "IconUrl": "https://github.com/Bombarding/SomethingNeedDoing/raw/master/res/icon.png",
-    "Punchline": "Work work.",
+    "IconUrl": "https://github.com/Bombarding/SomethingNeedDoing/raw/master/res/new_icon.png",
+    "Punchline": "Work work",
     "AcceptsFeedback": true,
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": 1696700348,
+    "LastUpdate": 1696701106,
     "DownloadCount": 0,
-    "DownloadLinkInstall": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.1/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.1/latest.zip",
-    "DownloadLinkTesting": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.1/latest.zip"
+    "DownloadLinkInstall": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.2/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.2/latest.zip",
+    "DownloadLinkTesting": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.2/latest.zip"
   }
 ]
