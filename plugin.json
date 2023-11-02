@@ -3,7 +3,7 @@
     "Author": "WorkingRobot & Bombarding",
     "Name": "Something Need Doing Redux",
     "InternalName": "SomethingNeedDoing",
-    "AssemblyVersion": "1.5.0.7",
+    "AssemblyVersion": "1.5.0.8",
     "Description": "Because you just want to craft.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Bombarding/SomethingNeedDoing",
@@ -18,10 +18,10 @@
     "AcceptsFeedback": true,
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": 1698944983,
+    "LastUpdate": 1698957700,
     "DownloadCount": 0,
-    "DownloadLinkInstall": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.7/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.7/latest.zip",
-    "DownloadLinkTesting": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.7/latest.zip"
+    "DownloadLinkInstall": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.8/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.8/latest.zip",
+    "DownloadLinkTesting": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.8/latest.zip"
   }
 ]
