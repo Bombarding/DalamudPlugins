@@ -2,4 +2,4 @@ All credits to [Working Robot](https://github.com/WorkingRobot/) for the 6.5 upd
 
 This will not be maintained, check out WorkingRobot for any new feature improvements, just needed a working SND for personal use.
 
-`https://raw.githubusercontent.com/Bombarding/DalamudPlugins/main/plogon.json`
+`https://raw.githubusercontent.com/Bombarding/DalamudPlugins/main/plugin.json`
