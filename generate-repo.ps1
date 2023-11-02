@@ -71,4 +71,4 @@ foreach ($plugin in $pluginList) {
 $pluginJson = ConvertTo-Json $pluginsOut
 
 # Save repo to file
-Set-Content -Path "plogon.json" -Value $pluginJson
+Set-Content -Path "plugin.json" -Value $pluginJson
