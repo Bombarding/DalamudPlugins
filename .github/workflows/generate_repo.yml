@@ -9,7 +9,7 @@ on:
 
 jobs:
   generate:
-    name: Generate Plugin Data
+    name: Generate Plugin Data for Dalamud
     runs-on: windows-latest
     steps:
       - name: Get Branch Name
@@ -22,7 +22,7 @@ jobs:
       - name: Generate Repo And Check For Changes
         run: .\generate-repo.ps1
 
-      - name: Commit Files
+      - name: Commit Files to ${{ env.BRANCH_NAME }}
         continue-on-error: true
         run: |
           git config user.name github-actions[bot]
