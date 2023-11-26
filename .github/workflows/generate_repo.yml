@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate Repo And Check For Changes
-        run: .\generate-repo.ps1
+        run: .\generate.ps1
 
       - name: Commit Files to ${{ env.BRANCH_NAME }}
         continue-on-error: true
