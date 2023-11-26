@@ -62,6 +62,7 @@ foreach ($plugin in $pluginList) {
   $config | Add-Member -Name "DownloadLinkInstall" -MemberType NoteProperty -Value $downloadUrl
   $config | Add-Member -Name "DownloadLinkUpdate" -MemberType NoteProperty -Value $downloadUrl
   $config | Add-Member -Name "DownloadLinkTesting" -MemberType NoteProperty -Value $downloadUrl
+  $config | Add-Member -Name "Changelog" -MemberType NoteProperty -Value $json.body
 
   # Add to the plugin array.
   $pluginsOut += $config
