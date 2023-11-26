@@ -13,9 +13,6 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "ImageUrls": [],
-    "Tags": [
-      "crafting"
-    ],
     "IconUrl": "https://github.com/Bombarding/SomethingNeedDoing/raw/main/res/new_icon.png",
     "Punchline": "Crafting Shouldn't Be Difficult",
     "AcceptsFeedback": true,
