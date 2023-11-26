@@ -12,16 +12,16 @@ jobs:
     name: Generate Plugin Data
     runs-on: windows-latest
     steps:
-      - name: Extract Branch
+      - name: Get Branch Name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
+        run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/} | tr / -)" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run Powershell Script
+      - name: Generate Repo And Check For Changes
         run: .\generate-repo.ps1
+
       - name: Commit Files
         continue-on-error: true
         run: |
@@ -34,4 +34,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.extract_branch.outputs.branch }}
+          branch: ${{ env.BRANCH_NAME }}
