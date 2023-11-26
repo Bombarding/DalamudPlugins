@@ -58,7 +58,7 @@ foreach ($plugin in $pluginList) {
   $config | Add-Member -Name "IsHide" -MemberType NoteProperty -Value @false
   $config | Add-Member -Name "IsTestingExclusive" -MemberType NoteProperty -Value @false
   $config | Add-Member -Name "LastUpdate" -MemberType NoteProperty -Value $releaseTimestamp
-  $config | Add-Member -Name "DownloadCount" -MemberType NoteProperty -Value $downloadCount
+  $config | Add-Member -Name "DownloadCount" -MemberType NoteProperty -Value 1
   $config | Add-Member -Name "DownloadLinkInstall" -MemberType NoteProperty -Value $downloadUrl
   $config | Add-Member -Name "DownloadLinkUpdate" -MemberType NoteProperty -Value $downloadUrl
   $config | Add-Member -Name "DownloadLinkTesting" -MemberType NoteProperty -Value $downloadUrl
