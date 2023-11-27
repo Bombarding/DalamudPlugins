@@ -19,10 +19,10 @@
     "IsHide": false,
     "IsTestingExclusive": false,
     "LastUpdate": 1700968453,
-    "DownloadCount": 1,
+    "DownloadCount": 25,
+    "Changelog": "- Version bump and check new changelog addition.",
     "DownloadLinkInstall": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.9/latest.zip",
     "DownloadLinkUpdate": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.9/latest.zip",
-    "DownloadLinkTesting": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.9/latest.zip",
-    "Changelog": "- Version bump and check new changelog addition."
+    "DownloadLinkTesting": "https://github.com/Bombarding/SomethingNeedDoing/releases/download/1.5.0.9/latest.zip"
   }
 ]
