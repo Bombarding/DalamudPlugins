@@ -1,4 +1,4 @@
-name: Generate Plugin Data
+name: Plugin Generation
 
 on:
   schedule:
