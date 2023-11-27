@@ -1,3 +1,6 @@
+$username = "Bombarding"
+$repo = "SomethingNeedDoing"
+
 function GetAssetByType($assets, $type) {
   foreach ($asset in $assets) {
     if ($type -eq $asset.content_type) {
@@ -11,10 +14,21 @@ function ExitWithCode($code) {
   exit $code
 }
 
+function PreviousVersionDownloadCount($username, $repo) {
+  $data = Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases?per_page=100"
+  $json = ConvertFrom-Json $data.content
+  $downloadCount = 0
+  foreach ($release in $json) {
+    $downloadAsset = GetAssetByType $release.assets "application/zip"
+    $downloadCount += $downloadAsset.download_count
+  }
+  $downloadCount
+}
+
 $pluginsOut = @()
 
 # Fetch the release data from the Github API
-$data = Invoke-WebRequest -Uri "https://api.github.com/repos/Bombarding/SomethingNeedDoing/releases/latest"
+$data = Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest"
 $json = ConvertFrom-Json $data.content
 
 # Get data from the api request.
@@ -31,7 +45,9 @@ if ($null -eq $configAsset) {
   ExitWithCode 1
 }
 
-$downloadCount = $downloadAsset.download_count
+$latestDownloadCount = $downloadAsset.download_count
+$downloadCount = PreviousVersionDownloadCount $username $repo
+$downloadCount = $latestDownloadCount += $downloadCount
 $downloadUrl = $downloadAsset.browser_download_url
 
 # Get timestamp for the release.
@@ -51,15 +67,14 @@ if ($null -eq $config) {
 $config | Add-Member -Name "IsHide" -MemberType NoteProperty -Value @false
 $config | Add-Member -Name "IsTestingExclusive" -MemberType NoteProperty -Value @false
 $config | Add-Member -Name "LastUpdate" -MemberType NoteProperty -Value $releaseTimestamp
-$config | Add-Member -Name "DownloadCount" -MemberType NoteProperty -Value 1
+$config | Add-Member -Name "DownloadCount" -MemberType NoteProperty -Value $downloadCount
+$config | Add-Member -Name "Changelog" -MemberType NoteProperty -Value $json.body
 $config | Add-Member -Name "DownloadLinkInstall" -MemberType NoteProperty -Value $downloadUrl
 $config | Add-Member -Name "DownloadLinkUpdate" -MemberType NoteProperty -Value $downloadUrl
 $config | Add-Member -Name "DownloadLinkTesting" -MemberType NoteProperty -Value $downloadUrl
-$config | Add-Member -Name "Changelog" -MemberType NoteProperty -Value $json.body
 
 # Add to the plugin array.
 $pluginsOut += $config
-
 
 # Convert plugins to JSON
 $pluginJson = ConvertTo-Json $pluginsOut
