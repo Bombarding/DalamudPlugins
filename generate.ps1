@@ -14,7 +14,7 @@ function ExitWithCode($code) {
   exit $code
 }
 
-function PreviousVersionDownloadCount($username, $repo) {
+function DownloadCount($username, $repo) {
   $data = Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases?per_page=100"
   $json = ConvertFrom-Json $data.content
   $downloadCount = 0
@@ -45,9 +45,7 @@ if ($null -eq $configAsset) {
   ExitWithCode 1
 }
 
-$latestDownloadCount = $downloadAsset.download_count
-$downloadCount = PreviousVersionDownloadCount $username $repo
-$downloadCount = $latestDownloadCount += $downloadCount
+$downloadCount = DownloadCount $username $repo
 $downloadUrl = $downloadAsset.browser_download_url
 
 # Get timestamp for the release.
